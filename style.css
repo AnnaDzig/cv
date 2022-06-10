@@ -174,10 +174,21 @@ body.summary a:hover{
         margin: 16px 0;
     }
 
-    .topnav.active {
-        left: 0;
+    .topnav_mobile_show {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color:var(--background-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
     }
-   
+    .topnav_mobile_show.active {
+         left: 0;
+    }
+
     }
 
    
@@ -203,10 +214,7 @@ body.summary a:hover{
   .topnav__item {
     list-style: none;
   }
-  .topnav__link {
-   
-  }
-
+ 
   .topnav__link::before {
     --topLeft: 0;
     --widthHeight: 100%;
@@ -227,54 +235,9 @@ body.summary a:hover{
     color: var(--decoration-color);
   }
    
-  /*.icon-menu-open,
-.icon-menu-close{
-  width: 50px;
-  height: 50px;
-  display: block;
-  position: relative;
-}
+ 
 
-.icon-menu-open::before {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 50%;
-  height: 2px;
-  background: #fff;
-  box-shadow:
-    0 -8px 0 #fff,
-    0 8px 0 #fff;
-}
 
-.icon-menu-close::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%) rotate(45deg);
-  width: 2px;
-  height: 50%;
-  content: '';
-  background: #fff;
-}
-
-.icon-menu-close::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%) rotate(-45deg);
-  width: 2px;
-  height: 50%;
-  content: '';
-  background: #fff;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-} */
 
  
 
@@ -440,6 +403,16 @@ span.contacts-item-discord {
 }
 .table-data{
     padding: 15px 20px;
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+}
+
+.works-link {
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 /* ----------------------------------------------------------- */
 .footer{
@@ -612,17 +585,7 @@ span.contacts-item-discord {
       height: 64px;
     }
   
-    .navbar-burger input[type="checkbox"] {
-      position: absolute;
-      display: block;
-      height: 32px;
-      width: 30px;
-      top: 20px;
-      left: 20px;
-      z-index: 5;
-      opacity: 0;
-    }
-  
+ 
     .navbar-burger .burger-lines {
       display: block;
       height: 23px;
